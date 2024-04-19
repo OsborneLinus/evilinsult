@@ -29,11 +29,21 @@ body {
 }
 
 .insult-button {
-  padding: 10px 20px;
+  padding: 10px 30px;
   font-size: 1em;
+  background-color: blueviolet;
+  color: ghostwhite;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.5s ease;
 }
 
 .insult-button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.insult-button:hover {
+  color: blueviolet;
+  background-color: ghostwhite;
 }
