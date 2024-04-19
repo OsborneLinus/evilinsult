@@ -26,10 +26,12 @@ body {
   justify-content: center;
   padding: 2rem;
   gap: 1rem;
+  border: 1px solid black;
 }
 
 .insult-button {
   padding: 10px 30px;
+  margin-top: 6px;
   font-size: 1em;
   background-color: blueviolet;
   color: ghostwhite;
