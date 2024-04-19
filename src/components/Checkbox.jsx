@@ -1,7 +1,6 @@
 export const CheckboxInput = ({ id, value, onChange, required }) => {
   return (
     <div>
-      <label htmlFor={id}>I CONSENT TO BEING INSULTED LIKE NEVER BEFORE</label>
       <input
         type="checkbox"
         value={value}
@@ -10,6 +9,7 @@ export const CheckboxInput = ({ id, value, onChange, required }) => {
         onChange={onChange}
         required={required}
       />
+      <label htmlFor={id}>I CONSENT TO BEING INSULTED LIKE NEVER BEFORE</label>
     </div>
   );
 };
