@@ -30,13 +30,10 @@ export default function InsultCard() {
     setShowInfo(false);
     setStartCountdown(true);
     setShowCountdown(true);
-    setIsChecked(false);
   };
-  console.log(triggerFetch);
 
   if (startCountdown)
     if (loading || showCountdown) {
-      // This is added to make sure that the countdown is not being runned the first time you enter the page.
       return (
         <Countdown
           onCountdownEnd={handleCountdownEnd}
@@ -48,9 +45,12 @@ export default function InsultCard() {
   return (
     <div>
       {showInfo ? (
-        <Info />
+        <>
+          <Info />
+          <CheckboxInput id="insult-consent" onChange={checkHandler} required />
+        </>
       ) : (
-        <div class="insult-card">
+        <div className="insult-card">
           <p>{decodedInsult}</p>
           <p>{!decodedAuthor == "" ? decodedAuthor : "anonymous asshole"}</p>
         </div>
@@ -62,7 +62,6 @@ export default function InsultCard() {
       >
         INSULT ME
       </Button>
-      <CheckboxInput id="insult-consent" onChange={checkHandler} required />
     </div>
   );
 }
