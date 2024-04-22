@@ -27,6 +27,7 @@ body {
   padding: 2rem;
   gap: 1rem;
   border: 1px solid black;
+  max-width: calc(70);
 }
 
 .insult-button {
@@ -48,4 +49,17 @@ body {
 .insult-button:hover {
   color: blueviolet;
   background-color: ghostwhite;
+}
+
+.flip {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  color: brown;
+  transition: transform 0.5s;
+}
+
+.flip.flipped {
+  color: aqua;
+  transform: rotateY(180deg);
 }
