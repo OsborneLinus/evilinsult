@@ -1,12 +1,14 @@
 import InsultCard from "./components/InsultCard";
+import Header from "./components/Header";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <div>
+      <Header />
+      <main>
         <InsultCard />
-      </div>
+      </main>
     </>
   );
 }

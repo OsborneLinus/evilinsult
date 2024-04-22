@@ -4,6 +4,7 @@ import { CheckboxInput } from "./Checkbox";
 import { useState } from "react";
 import { Button } from "./Button";
 import Countdown from "./Countdown";
+import HeartIcon from "./HeartIcon";
 import Info from "./Info";
 
 export default function InsultCard() {
@@ -43,16 +44,23 @@ export default function InsultCard() {
     }
 
   return (
-    <div>
+    <>
       {showInfo ? (
         <>
-          <Info />
-          <CheckboxInput id="insult-consent" onChange={checkHandler} required />
+          <Info>
+            <CheckboxInput
+              id="insult-consent"
+              onChange={checkHandler}
+              required
+            />
+          </Info>
         </>
       ) : (
         <div className="insult-card">
-          <p>{decodedInsult}</p>
-          <p>{!decodedAuthor == "" ? decodedAuthor : "anonymous asshole"}</p>
+          <p className="insult-text">{decodedInsult}</p>
+          <p className="insult-text">
+            {!decodedAuthor == "" ? decodedAuthor : "anonymous asshole"}
+          </p>
         </div>
       )}
       <Button
@@ -60,8 +68,8 @@ export default function InsultCard() {
         onClick={handleInfoClick}
         className="insult-button"
       >
-        INSULT ME
+        INSULT ME <HeartIcon />
       </Button>
-    </div>
+    </>
   );
 }
