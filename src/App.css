@@ -124,3 +124,13 @@ div.flip.flipped {
 p.info-text.flipped {
   transform: rotateY(180deg);
 }
+
+.footer-text {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-text > span {
+  color: rgb(2, 2, 186);
+  text-decoration: underline;
+}

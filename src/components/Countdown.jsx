@@ -8,7 +8,7 @@ export default function Countdown({ onCountdownEnd, startCountdown }) {
     if (startCountdown && count < 3) {
       const timerId = setTimeout(() => {
         setCount(count + 1);
-      }, 1000);
+      }, 1500);
       return () => clearTimeout(timerId);
     } else if (count === 3) {
       onCountdownEnd();
