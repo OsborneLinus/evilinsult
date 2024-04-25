@@ -4,6 +4,7 @@
 
 :root {
   --header-width: calc(80%);
+  position: relative;
 }
 
 #root {
@@ -52,11 +53,18 @@ p.insult-text {
 label,
 button {
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
+}
+
+.info-text.countdown {
+  font-size: 2rem;
+  font-weight: 700;
+  opacity: 80%;
 }
 
 label {
   font-weight: 500;
+  font-style: italic;
 }
 
 .header {
@@ -75,14 +83,23 @@ label {
 div.flip {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   padding: 2rem;
-  gap: 1rem;
+  gap: 2rem;
   width: var(--header-width);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 25px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-text {
+  text-align: center;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
 }
 
 .insult-button {
@@ -112,6 +129,20 @@ div.flip {
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+.non-apology {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  text-align: right;
+  margin: 0;
+}
+
+.a-hole {
+  font-family: "Nanum Pen Script", serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
 div.flip {
   width: var(--header-width);
   transition: all 0.5s;
@@ -125,12 +156,31 @@ p.info-text.flipped {
   transform: rotateY(180deg);
 }
 
-.footer-text {
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
   text-decoration: none;
   color: black;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+  gap: 1rem;
 }
 
-.footer-text > span {
-  color: rgb(2, 2, 186);
+.footer > p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.footer-text > a {
+  color: rgb(79, 2, 186);
   text-decoration: underline;
+  margin: 0;
+}
+
+.footer-text {
+  margin: 0;
 }

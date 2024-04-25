@@ -1,6 +1,6 @@
 export const CheckboxInput = ({ id, value, onChange, required }) => {
   return (
-    <div>
+    <div className="checkbox">
       <input
         type="checkbox"
         value={value}

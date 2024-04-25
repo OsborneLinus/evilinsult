@@ -58,8 +58,11 @@ export default function InsultCard() {
       ) : (
         <div className="insult-card">
           <p className="insult-text">{decodedInsult}</p>
-          <p className="insult-text">
-            {!decodedAuthor == "" ? decodedAuthor : "anonymous asshole"}
+          <p className="non-apology">
+            Hey, we warned you. Don't blame us, blame <br />
+            <span className="a-hole">
+              {!decodedAuthor == "" ? decodedAuthor : "an anonymous asshole"}
+            </span>
           </p>
         </div>
       )}
